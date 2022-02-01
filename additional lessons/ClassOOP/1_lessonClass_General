@@ -1,0 +1,42 @@
+class Human:
+    def __init__(self, name, age, gender):                # --> КОНСТРУКТОР СЛАССА <--
+        self.name = name                                  # --> АТРИБУТ ЭКЗЕМПЛЯРА КЛАССА  <--
+        self.age = age
+        self.gender = gender
+
+    def get_name(self):                                   # --> МЕТОД КЛАССА <--
+        return f"Your name is {self.name}"                # --> ВЫВОД МЕТОДА КЛАССА <--
+
+    def get_age(self):                                    # --> МЕТОД КЛАССА <--
+        return f"Your age old is {self.age}"
+
+    def get_gender(self):                                 # --> МЕТОД КЛАССА <--
+        return f"Your gender is {self.gender}"
+
+    def get_full_info(self):
+        return f"Full information Person:\n" \
+               f"-------------------------\n" \
+               f"Person name: {self.name}\n" \
+               f"Person age: {self.age}\n" \
+               f"Person gender: {self.gender}"
+
+
+person_1 = Human(name='Jone', age=21, gender='man')       # --> ЗАПИСЬ ЧЕРЕЗ НАИМЕННОВАНИЯ <--
+person_2 = Human(name='Ana', age=34, gender='woman')
+
+person_3 = Human('Alina', 25, 'woman')                    # --> ЗАПИСЬ БЕЗ НАИМЕННОВАНИЯ <--
+person_4 = Human('Alex', 45, 'man')
+
+print(person_1.age)                                       # --> ВЫВОД !!! АТРИБУТА !!! <--
+print(person_1.get_name())                                # --> ВЫВОД !!! МЕТОДА !!! <--
+print(person_1.get_gender())
+
+print()
+print(person_1.get_full_info())                           # --> ВЫВОД !!! МЕТОДА !!! <--
+print()
+
+print('=============================')
+
+print(person_3.age)
+print(person_3.get_name())
+print(person_3.get_gender())
